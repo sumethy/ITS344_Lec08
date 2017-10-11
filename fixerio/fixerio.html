@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="money.js"></script>
+	<script type="text/javascript">
+		
+		var demo = function(data) {
+			console.log(data);
+			fx.rates = data.rates
+			console.log(fx.rates)
+			var rate = fx(1).from("GBP").to("USD") // 1 here is the amount of money to convert
+			alert("1 GBP = $" + rate.toFixed(4))
+		}
+
+		$.getJSON("http://api.fixer.io/2012-10-10", demo)
+	</script>
+</body>
+</html>

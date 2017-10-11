@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<p>
+Depending on browser support:<br>
+A date picker can pop-up when you enter the input field.
+</p>
+
+<form onsubmit="myFunction()">
+  Birthday:
+  <input type="date" id="bday">
+  <input type="submit">
+</form>
+
+<p><strong>Note:</strong> type="date" is not supported in Internet Explorer 10 and earlier versions.</p>
+
+<script type="text/javascript">
+	function myFunction(){
+		var date = document.getElementById("bday").value;
+		console.log(date);
+	}
+</script>
+
+</body>
+</html>
